@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`min-h-screen flex flex-col ${inter.className}`}>
+        <main className="flex flex-1 flex-col items-center py-16 bg-gray-50">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
